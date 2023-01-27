@@ -1,6 +1,6 @@
 package main
 
-var jsonf = `{
+var jsonfe = `{
     "Options": {
 		"Timestamp": "2023-01-26T13:00:00+03:00",
         "Create": {
