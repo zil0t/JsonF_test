@@ -1,0 +1,25 @@
+{
+    "Options": {
+		"Timestamp": "2023-01-27 12:12:40",
+        "Create": {
+            "ID": 1,
+            "Condition": 0
+        },
+        "Change_Name": {
+            "ID": 2,
+            "Condition": 0
+        },
+        "Delete": {
+            "ID": 3,
+            "Condition": 0
+        },
+        "Get_Time": {
+            "ID": 4,
+            "Condition": 0
+        },
+        "Input": {
+            "ID": 5,
+            "Condition": 0
+        }
+    }
+}
