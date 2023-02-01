@@ -1,13 +1,15 @@
-{
+package json
+
+var Json = `{
     "Options": {
-		"Timestamp": "2023-02-01 02:15:11",
+		"Timestamp": "2023-01-26T13:00:00+03:00",
         "Create": {
             "ID": 1,
             "Condition": 0
         },
         "Change_Name": {
             "ID": 2,
-            "Condition": 1
+            "Condition": 0
         },
         "Delete": {
             "ID": 3,
@@ -22,4 +24,4 @@
             "Condition": 0
         }
     }
-}
+}`
