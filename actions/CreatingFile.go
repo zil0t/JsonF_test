@@ -5,13 +5,12 @@ import (
 	"log"
 	"os"
 	"time"
+	"zz/values"
 )
 
-const file = "log.txt"
-
 // Creating Создание файла
-func Creating(json string) {
-	f, err := os.OpenFile(file,
+func Creating(input JsonInput) {
+	f, err := os.OpenFile(values.File,
 		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	//Записываем произвольную строку
 	timestamp := time.Now()
@@ -26,11 +25,7 @@ func Creating(json string) {
 		}
 	}(f)
 
-	//Меняем состояние json
-	input := JsonInput{
-		json,
-		"Options.Create.Condition",
-		1,
-	}
+	input.string = "Options.Create.Condition"
+	input.value = 1
 	input.JsonWriter()
 }

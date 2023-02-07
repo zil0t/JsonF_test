@@ -3,23 +3,21 @@ package actions
 import (
 	"fmt"
 	"os"
+	"zz/values"
 )
 
 // Delete Удаление файла
-func Delete(err error, json string) bool {
+func Delete(err error, input JsonInput) bool {
 	//Проверим, есть ли вобще файл
-	Existence(FileRenamed, err)
-	err = os.Remove(FileRenamed)
+	Existence(values.FileRenamed, err)
+	err = os.Remove(values.FileRenamed)
 	if err != nil {
 		fmt.Println(err)
 		return true
 	}
-	//Вносим изменения в json
-	input := JsonInput{
-		json,
-		"Options.Delete.Condition",
-		1,
-	}
+
+	input.string = "Options.Delete.Condition"
+	input.value = 1
 
 	input.JsonWriter()
 	return false
